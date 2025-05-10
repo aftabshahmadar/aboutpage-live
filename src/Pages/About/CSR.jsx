@@ -28,10 +28,11 @@ const Culture = () => {
           transition={{ duration: 1 }}
           className="text-white"
         >
-          <h1 className="display-4 fw-bold">Our Culture</h1>
+          <h1 className="display-4 fw-bold">Corporate Social Responsibility</h1>
           <p className="lead">
-            At Cast and Blower, we believe in fostering a culture of excellence,
-            collaboration, and innovation that empowers every team member.
+          At Cast and Blower, we believe in doing business the right way. Our CSR initiatives focus on sustainability, education, health, and community welfare. We actively engage in creating a positive impact by supporting environmental practices and contributing to the well-being of society.
+
+
           </p>
         </motion.div>
       </div>
