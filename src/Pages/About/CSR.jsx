@@ -1,12 +1,42 @@
 import React from "react";
+import { motion } from "framer-motion";
+import CSRBg from "../../assets/images/CSR.jpg";
 
-const CSR = () => {
+const Culture = () => {
   return (
-    <div className="container py-5">
-      <h1>Corporate Social Responsibility</h1>
-      <p>Our efforts in CSR initiatives.</p>
+    <div
+      className="position-relative"
+      style={{
+        backgroundImage: `url(${CSRBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "90vh",
+        color: "#fff",
+      }}
+    >
+      {/* Optional dark overlay */}
+      <div
+        className="position-absolute top-0 start-0 w-100 h-100"
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+      ></div>
+
+      {/* Content Container */}
+      <div className="container h-100 position-relative d-flex align-items-center">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          className="text-white"
+        >
+          <h1 className="display-4 fw-bold">Our Culture</h1>
+          <p className="lead">
+            At Cast and Blower, we believe in fostering a culture of excellence,
+            collaboration, and innovation that empowers every team member.
+          </p>
+        </motion.div>
+      </div>
     </div>
   );
 };
 
-export default CSR;
+export default Culture;
