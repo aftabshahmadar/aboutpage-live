@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import CSRBg from "../../assets/images/CSR.jpg";
+import CSRBg from "../../assets/images/Csr.jpg";
 
 const Culture = () => {
   return (
