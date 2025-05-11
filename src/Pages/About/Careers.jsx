@@ -124,7 +124,7 @@ const Careers = () => {
               </div>
             </div>
           ) : (
-            <div className="ratio ratio-16x9" style={{ height: "50vh" }}>
+            <div className="ratio ratio-16x9" style={{ height: "70vh" }}>
               <iframe
                 className="w-100 h-100"
                 src="https://www.youtube.com/embed/KO3VhTsDwDM?autoplay=1"
@@ -136,6 +136,27 @@ const Careers = () => {
           )}
         </div>
       </div>
+
+      {/*  */}
+
+      <section className="py-5 bg-white">
+  <div className="container">
+    <h2 className="fw-bold mb-4">Career Development</h2>
+    <p>
+      Meide Group values employee growth and promotes the common development of employees and the company. The company provides two career development paths, management and technical, for employees with different potentials. It has implemented a professional technical position appointment system in the fields of product research and development, process equipment technology, IT technology, and lean management, providing pathways for promotion and development for professional technical talents.
+    </p>
+    <p>
+      The company holds annual employee development discussions, where supervisors and employees jointly review their achievements in work performance, capabilities, and the practice of company values, explore their strengths and areas for development, clarify their career development directions, and develop targeted training measures for each employee to provide strong support for their growth.
+    </p>
+    <p>
+      Our employees can gain more knowledge and skills through job rotation and can choose suitable positions through internal recruitment and competitive hiring. The company also offers learning and certification opportunities for management tools such as project management, target management, and process management.
+    </p>
+    <p>
+      The company places great emphasis on talent and technology, regularly selecting “Special Contributors,” “Meide Technology Award” recipients, and “Meide Craftsmen” to recognize and reward employees who have achieved outstanding results in management and technology, and prioritizes their promotion and development opportunities.
+    </p>
+  </div>
+</section>
+
     </>
   );
 };
