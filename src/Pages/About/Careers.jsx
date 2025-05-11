@@ -12,7 +12,7 @@ import YouTubeThumbnail from "../../assets/images/youtube-thumbnail.jpg"; // Rep
 
 // Quality
 import Gal1 from "../../assets/images/Gal1.png";
-import Gal2 from '../../assets/images/gal2.png'
+import Gal2 from '../../assets/images/Gal2.png'
 import Gal3 from "../../assets/images/Gal3.png";
 
 // Machine
