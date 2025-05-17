@@ -9,10 +9,7 @@ import Img5 from "../../assets/images/businessblocks.webp";
 import Img6 from "../../assets/images/wildlife.jpg";
 import YouTubeThumbnail from "../../assets/images/youtube-thumbnail.jpg"; // Replace with your image
 
-
-
 const Careers = () => {
-  
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const handleVideoClick = () => {
@@ -199,7 +196,7 @@ const Careers = () => {
             explore their strengths and areas for development, clarify their
             career development directions, and develop targeted training
             measures for each employee to provide strong support for their
-            growth.
+            growth
           </p>
           <p>
             Our employees can gain more knowledge and skills through job
@@ -211,7 +208,7 @@ const Careers = () => {
           <p>
             The company places great emphasis on talent and technology,
             regularly selecting “Special Contributors,” “Meide Technology Award”
-            recipients, and “Meide Craftsmen” to recognize and reward employees
+            recipients, and “Meide Craftsmen” to recognize and  reward employees
             who have achieved outstanding results in management and technology,
             and prioritizes their promotion and development opportunities.
           </p>
@@ -224,35 +221,36 @@ const Careers = () => {
           <div className="row text-center">
             {developmentCards.map((card, index) => (
               <motion.div
-  className="col-6 col-md-3 mb-4"
-  key={index}
-  custom={index}
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={cardVariants}
->
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 200, damping: 10 }}
-    className="rounded overflow-hidden shadow-sm mb-3"
-    style={{ height: "200px" }}
-  >
-    <img
-      src={card.img}
-      alt={card.title}
-      className="w-100 h-100"
-      style={{ objectFit: "cover", transition: "transform 0.3s ease" }}
-    />
-  </motion.div>
-  <h6 className="fw-semibold">{card.title}</h6>
-</motion.div>
-
+                className="col-6 col-md-3 mb-4"
+                key={index}
+                custom={index}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={cardVariants}
+              >
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                  className="rounded overflow-hidden shadow-sm mb-3"
+                  style={{ height: "200px" }}
+                >
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="w-100 h-100"
+                    style={{
+                      objectFit: "cover",
+                      transition: "transform 0.3s ease",
+                    }}
+                  />
+                </motion.div>
+                <h6 className="fw-semibold">{card.title}</h6>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-    
     </>
   );
 };
