@@ -4,7 +4,7 @@ import SQbg from "../../assets/images/SuplierQualification.jpg";
 import crthammerImg from "../../assets/images/crthammer.jpg";
 import signImg from "../../assets/images/sign.jpg";
 
-const Culture = () => {
+const SuplierQualification = () => {
   const [popupContent, setPopupContent] = useState(null);
 
   const handlePopup = (text) => {
@@ -144,35 +144,44 @@ const Culture = () => {
       </section>
 
       {/* Popup Card */}
-    {popupContent && (
-  <div
-    className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
-    style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", zIndex: 9999 }}
-  >
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      exit={{ scale: 0.8, opacity: 0 }}
-      transition={{ duration: 0.3 }}
-      className="bg-white p-4 rounded shadow"
-      style={{ maxWidth: "700px", width: "90%", maxHeight: "80vh", overflowY: "auto" }}
-    >
-      <div className="d-flex justify-content-between align-items-center mb-3 sticky-top bg-white" style={{ top: 0 }}>
-        <h5 className="mb-0">Details</h5>
-        <button
-          className="btn btn-sm btn-outline-secondary"
-          onClick={closePopup}
+      {popupContent && (
+        <div
+          className="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.6)", zIndex: 9999 }}
         >
-          &times;
-        </button>
-      </div>
-      <p style={{ whiteSpace: "pre-wrap", textAlign: "justify" }}>{popupContent}</p>
-    </motion.div>
-  </div>
-)}
-
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white p-4 rounded shadow"
+            style={{
+              maxWidth: "700px",
+              width: "90%",
+              maxHeight: "80vh",
+              overflowY: "auto",
+            }}
+          >
+            <div
+              className="d-flex justify-content-between align-items-center mb-3 sticky-top bg-white"
+              style={{ top: 0 }}
+            >
+              <h5 className="mb-0">Details</h5>
+              <button
+                className="btn btn-sm btn-outline-secondary"
+                onClick={closePopup}
+              >
+                &times;
+              </button>
+            </div>
+            <p style={{ whiteSpace: "pre-wrap", textAlign: "justify" }}>
+              {popupContent}
+            </p>
+          </motion.div>
+        </div>
+      )}
     </>
   );
 };
 
-export default Culture;
+export default SuplierQualification;
