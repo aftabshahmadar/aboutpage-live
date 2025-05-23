@@ -41,7 +41,6 @@
   opacity: 0.85;
 }
 /* csrrevealsection */
-
 /* --- Overall Section Container (.bd_sc) --- */
 .bd_sc {
   width: 100%;
@@ -326,17 +325,18 @@
   .swiper-slide .card-body {
     padding: 1.8rem;
   }
-  .swiper_btn {
-    width: 45px;
-    height: 45px;
-    font-size: 1.7rem;
-  }
+  /* HIDE NAVIGATION BUTTONS ON SMALLER SCREENS */
   .swiper-button-prev-custom,
   .swiper-button-next-custom {
-    margin: 0 12px;
+    display: none; /* This hides the buttons */
+  }
+  /* Ensure the button box doesn't collapse if only pagination is left */
+  .btn_box {
+    justify-content: center; /* Center pagination if buttons are gone */
+    margin-top: 25px; /* Adjust margin as buttons are removed */
   }
   .swiper-pagination-custom {
-    margin: 0 20px;
+    margin: 0 20px; /* Keep pagination spacing */
   }
 }
 
@@ -381,11 +381,12 @@
     flex-direction: column; /* Stack buttons and pagination vertically */
     margin-top: 25px;
   }
+  /* Corrected typo here: swiper- button-next-custom -> swiper-button-next-custom */
   .swiper-button-prev-custom,
   .swiper-button-next-custom {
-    margin: 10px 0; /* Vertical margin for stacked buttons */
+    display: none; /* Ensure they are hidden */
   }
   .swiper-pagination-custom {
-    margin-top: 15px; /* Space between buttons and pagination */
+    margin-top: 15px; /* Space between pagination and where buttons would be */
   }
 }
