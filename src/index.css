@@ -40,3 +40,352 @@
 .career-gallery .image-card:not(:hover) .img-box img {
   opacity: 0.85;
 }
+/* csrrevealsection */
+
+/* --- Overall Section Container (.bd_sc) --- */
+.bd_sc {
+  width: 100%;
+  max-width: 1350px; /* Even wider max-width for a grander feel */
+  margin: 80px auto; /* More generous vertical margin */
+  padding: 0 30px; /* Comfortable horizontal padding */
+  overflow: hidden; /* Crucial for Swiper's internal calculations */
+  position: relative; /* For potential z-index stacking */
+  background-color: transparent; /* Changed: Transparent background for the section block */
+  border-radius: 16px; /* Soft, modern rounded corners */
+  box-shadow: none; /* Changed: No shadow for the section container itself */
+  border: none; /* Changed: No border for the section container */
+}
+
+/* Inner content wrapper */
+.add_con {
+  padding: 60px 0; /* More internal vertical padding */
+}
+
+/* --- Philanthropy Text Section (usual_box) --- */
+.usual_box {
+  margin-bottom: 60px; /* Increased space below the text block */
+  text-align: center; /* Center align all text content */
+}
+
+.usual_box .wrap {
+  max-width: 960px; /* Wider text block for better flow */
+  margin: 0 auto; /* Center the text wrapper */
+}
+
+.usual_tit {
+  font-size: 3.8rem; /* Larger, more commanding title */
+  font-weight: 800; /* Extra bold for impact */
+  margin-bottom: 1.5rem; /* Space below title */
+  color: #2c3e50; /* Deep charcoal for high contrast and modern feel */
+  text-transform: capitalize; /* Consistent capitalization */
+  letter-spacing: -0.04em; /* Tighter letter spacing for a sleek look */
+  line-height: 1.1; /* Tighter line height for large headings */
+}
+
+.con {
+  font-size: 1.25rem; /* More generous body text size for readability */
+  line-height: 1.75; /* Comfortable line height for long paragraphs */
+  color: #7f8c8d; /* Muted grey for body text, less harsh than black */
+  max-width: 700px; /* Limit paragraph width for better readability */
+  margin: 0 auto; /* Center the paragraph */
+}
+
+/* --- Swiper Carousel Customization (.mySwiper) --- */
+.mySwiper {
+  width: 100%;
+  padding: 50px 0 90px; /* More vertical padding for the coverflow effect and pagination */
+  perspective: 1500px; /* Increased perspective for a more dramatic 3D effect */
+  /* Added: This property will create space between slides */
+  /* Note: For EffectCoverflow, spaceBetween might interact uniquely. */
+  /* You can adjust this value to control the perceived gap. */
+  --swiper-wrapper-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Ensure consistent transitions */
+}
+
+.swiper-slide {
+  width: 340px; /* Optimized width for a balanced look, slightly larger cards */
+  height: auto; /* Content determines height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Removed: Individual slide transition; Swiper handles the main transform */
+  /* Added: Margin to visually create a gap, but Swiper's coverflow still controls overlap */
+  margin: 0 20px; /* This helps push cards apart. Adjust as needed. */
+}
+
+/* --- Card Styling within Swiper Slides --- */
+.swiper-slide .card {
+  min-height: 320px; /* Taller cards for more content room and aesthetic balance */
+  border: none; /* Changed: No border for cards */
+  border-radius: 20px; /* More pronounced, soft rounded corners */
+  overflow: hidden; /* Ensures content/shadows stay within rounded corners */
+  background-color: #ffffff; /* Card background is still white */
+  /* Layered shadows for depth */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07), /* Adjusted for no border */
+              0 15px 45px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother overall card transitions */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hover effect for cards */
+.swiper-slide .card:hover {
+  transform: translateY(-12px) scale(1.03); /* Lift higher and slightly enlarge on hover */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), /* More intense shadow on hover */
+              0 25px 70px rgba(0, 0, 0, 0.2);
+  /* border-color: #4a90e2; This would require a border to be visible */
+}
+
+/* Style for the active (centered) card */
+.swiper-slide-active .card {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18), /* Even more prominent shadow for the active card */
+                0 30px 80px rgba(0, 0, 0, 0.25);
+    transform: translateY(-8px); /* Lift active card slightly more than resting */
+    /* border-color: #4a90e2; */
+}
+
+.swiper-slide .card-body {
+  padding: 2.5rem; /* More generous internal padding */
+  flex-grow: 1; /* Allows the body to take up available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.swiper-slide .card-title {
+  font-size: 1.8rem; /* Larger, bolder title */
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+  color: #e91111; /* Primary blue for titles */
+  line-height: 1.25;
+}
+
+.swiper-slide .card-subtitle {
+  font-size: 1.05rem; /* Slightly larger subtitle */
+  color: #a0a0a0; /* Lighter grey for subtitle, more subtle */
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.swiper-slide .card-text {
+  font-size: 1.1rem; /* More readable body text in card */
+  color: #4f606a; /* Darker grey for card body text */
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* --- Navigation Buttons (.btn_box) --- */
+.btn_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px; /* Space above buttons */
+  position: relative;
+  z-index: 10;
+}
+
+.swiper_btn {
+  width: 60px; /* Larger, more impactful buttons */
+  height: 60px;
+  background-color: #ff0000; /* Primary blue */
+  color: #ffffff; /* White icon */
+  border-radius: 50%; /* Perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  font-size: 2.2rem; /* Larger, more prominent icons */
+  font-weight: 300; /* Lighter font weight for modern look */
+  box-shadow: 0 6px 15px rgb(238, 23, 23); /* Subtle blue shadow */
+}
+
+.swiper_btn:hover {
+  background-color: #d13b3b; /* Darker blue on hover */
+  transform: scale(1.15); /* More pronounced pop effect */
+  box-shadow: 0 8px 20px rgba(205, 30, 30, 0.5); /* More intense shadow on hover */
+}
+
+/* Positioning for custom navigation */
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: static !important; /* Override Swiper's default absolute positioning */
+  margin: 0 25px; /* More space between buttons */
+}
+
+/* --- Pagination Bullets (.swiper-pagination-custom) --- */
+.swiper-pagination-custom {
+  position: static !important;
+  margin: 0 35px; /* Space around pagination */
+  bottom: auto !important;
+  width: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Adjust if pagination wraps on small screens */
+}
+
+.swiper-pagination-bullet {
+  background: #d34949cc; /* Blue for inactive bullets */
+  opacity: 0.25; /* More translucent inactive bullets */
+  width: 12px; /* Slightly larger bullets */
+  height: 12px;
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 0 7px !important; /* Spacing between bullets */
+  border: 1px solid rgba(209, 58, 58, 0.849); /* Subtle border for inactive bullets */
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff0000; /* Full opacity blue for active bullet */
+  opacity: 1;
+  transform: scale(1.3); /* Larger active bullet */
+  border-color: #ff0000; /* Stronger border for active bullet */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+  .bd_sc {
+    padding: 0 20px;
+    margin: 60px auto;
+  }
+  .usual_tit {
+    font-size: 3.2rem;
+  }
+  .con {
+    font-size: 1.15rem;
+  }
+  .swiper-slide {
+    width: 320px; /* Slight adjustment */
+    margin: 0 15px; /* Adjusted gap */
+  }
+}
+
+@media (max-width: 992px) {
+  .bd_sc {
+    padding: 0 15px;
+    margin: 50px auto;
+  }
+  .usual_tit {
+    font-size: 2.8rem;
+  }
+  .con {
+    font-size: 1rem;
+  }
+  .swiper-slide {
+    width: 290px; /* Adjust slide width for medium screens */
+    margin: 0 12px; /* Adjusted gap */
+  }
+  .swiper-slide .card {
+    min-height: 290px;
+  }
+  .swiper-slide .card-title {
+    font-size: 1.6rem;
+  }
+  .swiper-slide .card-text {
+    font-size: 1rem;
+  }
+  .swiper_btn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    margin: 0 18px;
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 6px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .bd_sc {
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+  .add_con {
+    padding: 40px 0;
+  }
+  .usual_tit {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+  .con {
+    font-size: 0.95rem;
+  }
+  .swiper-slide {
+    width: 260px; /* Further adjust slide width for tablets */
+    margin: 0 10px; /* Adjusted gap */
+  }
+  .swiper-slide .card {
+    min-height: 270px;
+    border-radius: 15px;
+  }
+  .swiper-slide .card-body {
+    padding: 1.8rem;
+  }
+  .swiper_btn {
+    width: 45px;
+    height: 45px;
+    font-size: 1.7rem;
+  }
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    margin: 0 12px;
+  }
+  .swiper-pagination-custom {
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bd_sc {
+    padding: 0 10px;
+    margin: 30px auto;
+    border-radius: 10px;
+  }
+  .add_con {
+    padding: 30px 0;
+  }
+  .usual_tit {
+    font-size: 2rem;
+    letter-spacing: -0.03em;
+  }
+  .con {
+    font-size: 0.9rem;
+  }
+  .swiper-slide {
+    width: 280px; /* On very small screens, sometimes a slightly larger single card is better */
+    margin-bottom: 25px; /* Add space if pagination wraps below */
+    margin: 0 10px; /* Adjusted gap */
+  }
+  .swiper-slide .card {
+    min-height: 250px;
+    border-radius: 12px;
+  }
+  .swiper-slide .card-body {
+    padding: 1.5rem;
+  }
+  .swiper-slide .card-title {
+    font-size: 1.5rem;
+  }
+  .swiper_btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 8px rgba(255, 0, 0, 0.3);
+  }
+  .btn_box {
+    flex-direction: column; /* Stack buttons and pagination vertically */
+    margin-top: 25px;
+  }
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    margin: 10px 0; /* Vertical margin for stacked buttons */
+  }
+  .swiper-pagination-custom {
+    margin-top: 15px; /* Space between buttons and pagination */
+  }
+}

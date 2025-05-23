@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link text-white bg-danger px-3" to="/">Home</Link>
+              <Link className="nav-link text-gray px-3" to="/">Home</Link>
             </li>
 
             {/* About Us Link + Dropdown */}

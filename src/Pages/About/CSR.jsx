@@ -1,6 +1,7 @@
 import React from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 import CSRRevealSection from "./CSRRevealSection";
+import CSRStatsSection from "./CSRStatsSection";
 import CSRBg from "../../assets/images/Csr.jpg";
 
 const CSR = () => {
@@ -78,20 +79,37 @@ const CSR = () => {
         
       </div>
 
-        <div className="container h-100 position-relative d-flex align-items-center ">
-                <motion.div
-                  initial={{ opacity: 0, x: -50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1 }}
-                  className="text-black"
-                >
-                  <h1 className="display-7 fw-light">Green & Low-Carbon Initiatives</h1>
-                  <p className="lead">
-             Meide Group is committed to sustainable development, adhering to the environmental philosophy of “proactive planning and exceeding standards” by efficiently utilizing energy, eliminating harmful emissions, preventing pollution, and promoting resource recycling. We manufacture eco-friendly products and maintain industry-leading energy consumption per ¥10,000 of output value.
-In July 2022, Low-Carbon Management Committee was Established to oversee the “Dual Carbon” strategy (carbon peaking and neutrality), drive energy conservation, emission reduction, and cost optimization across the group and its supply chain. As a multinational enterprise, we prioritize sustainable practices to align with global climate goals.
-                  </p>
-                </motion.div>
-              </div>
+    <div className="container">
+  <motion.div
+    className=" rounded p-md-5"
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    viewport={{ once: true }}
+  >
+    <h2 className="fw-semi-bold mb-3s display-6">
+      Green & Low-Carbon Initiatives
+    </h2>
+    <p className="lead text-secondary">
+      Meide Group is committed to sustainable development, adhering to the
+      environmental philosophy of “proactive planning and exceeding standards” by
+      efficiently utilizing energy, eliminating harmful emissions, preventing
+      pollution, and promoting resource recycling. We manufacture eco-friendly
+      products and maintain industry-leading energy consumption per ¥10,000 of
+      output value.
+    </p>
+    <p className="lead text-secondary">
+      In July 2022, the Low-Carbon Management Committee was established to oversee
+      the “Dual Carbon” strategy (carbon peaking and neutrality), drive energy
+      conservation, emission reduction, and cost optimization across the group and
+      its supply chain. As a multinational enterprise, we prioritize sustainable
+      practices to align with global climate goals.
+    </p>
+  </motion.div>
+</div>
+
+
+              <CSRStatsSection />
 
       {/* Next section */}
       <CSRRevealSection />
